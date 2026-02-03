@@ -13,7 +13,5 @@ COPY spark-3.5.8-bin-hadoop3 /opt/spark
 ENV SPARK_HOME=/opt/spark
 ENV PATH=$PATH:$SPARK_HOME/bin
 
-# (Optional) Spark config nếu bạn có
-# COPY spark-defaults.conf /opt/spark/conf/
 
 USER ${NB_USER}
