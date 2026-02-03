@@ -1,13 +1,31 @@
-# polynote-spark3
-repo này chứa thư mực để cài đặt polynote với spark3
-# Các bước thực hiện:
-* kéo repo về
-* mở terminal và cd đến thư mục chứ repo vừa tải về
-* trong terminal mở wsl nơi tại thư mục đã tạo, chạy lệnh:
-  docker run --rm -it \
+# repo này chứa thư mực để cài đặt polynote với spark3 #
+Chú ý: cần cài Docker Desktop và mở sẵn Docker Desktop để thực hiện
+▶️ Hướng dẫn sử dụng
+Bước 1: Clone repository
+```
+git clone https://github.com/nam13092003/polynote-spark3.git
+```
+Bước 2: Di chuyển vào thư mục repository
+```
+cd ./polynote-spark3
+```
+Bước 3: Mở WSL tại thư mục hiện tại (Windows)
+(Nếu chưa có wsl thì cài)
+```
+wsl
+```
+Bước 4: Chạy Polynote với Docker
+```
+docker run --rm -it \
   -p 8192:8192 \
   -p 4040-4050:4040-4050 \
   -v $(pwd)/config.yml:/opt/config/config.yml \
   -v $(pwd)/notebooks:/opt/notebooks \
   polynote-spark3 \
   --config /opt/config/config.yml
+```
+🌐 Truy cập Polynote
+
+Sau khi container khởi động thành công, mở trình duyệt và truy cập:
+
+http://localhost:8192
