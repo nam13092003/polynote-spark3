@@ -16,6 +16,7 @@ Bước 3: Mở WSL tại thư mục hiện tại (Windows)
 wsl
 ```
 Bước 4: Chạy Polynote với Docker
+Đối với máy vào được wsl
 ```
 docker run --rm -it \
   -p 8192:8192 \
@@ -24,6 +25,10 @@ docker run --rm -it \
   -v $(pwd)/notebooks:/opt/notebooks \
   polynote-spark3 \
   --config /opt/config/config.yml
+```
+Đối với máy không vào được wsl
+```
+docker run --rm -it -p 8192:8192 -p 4040-4050:4040-4050 -v "%cd%/config.yml:/opt/config/config.yml" -v "%cd%/notebooks:/opt/notebooks" polynote-spark3 --config /opt/config/config.yml
 ```
 🌐 Truy cập Polynote
 
