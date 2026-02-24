@@ -1,7 +1,8 @@
 # repo này chứa thư mực để cài đặt polynote với spark3 #
-Chú ý: cần cài Docker Desktop và wsl (windows subsystem for linux), có thể sử dụng Microsoft Store để cài.
+Chú ý: cần cài Docker Desktop và wsl (windows subsystem for linux), có thể sử dụng Microsoft Store để cài, sau đó đăng nhập hoặc tạo tài khoản cho Docker Hub và wsl.
 
 ▶️ Hướng dẫn sử dụng
+
 Bước 1: Clone repository
 ```
 git clone https://github.com/nam13092003/polynote-spark3.git
