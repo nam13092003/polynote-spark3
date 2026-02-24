@@ -16,6 +16,7 @@ Bước 3: Mở WSL tại thư mục hiện tại (Windows)
 wsl
 ```
 Bước 4: Chạy Polynote với Docker
+
 Đối với máy vào được wsl
 ```
 docker run --rm -it \
