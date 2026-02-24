@@ -19,7 +19,7 @@ Bước 4: Build image với lệnh:
 ```
 docker build -t polynote-spark3 .
 ```
-Bước 4: Chạy Polynote với Docker
+Bước 5: Chạy Polynote với Docker
 
 Đối với máy vào được wsl
 ```
