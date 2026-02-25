@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  polynote:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        POLYNOTE_VERSION: ${POLYNOTE_VERSION:-0.5.0}
+        SCALA_VERSION: ${SCALA_VERSION:-2.12}
+
+    image: polynote-spark3
+
+    ports:
+      - "8192:8192"
+      - "4040-4050:4040-4050"
+
+    volumes:
+      - ./config.yml:/opt/config/config.yml
+      - ./notebooks:/opt/notebooks
+
+    command: ["--config", "/opt/config/config.yml"]
+
+    stdin_open: true
+    tty: true
