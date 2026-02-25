@@ -34,7 +34,13 @@ docker run --rm -it \
 ```
 Đối với máy không vào được wsl
 ```
-docker run --rm -it -p 8192:8192 -p 4040-4050:4040-4050 -v "%cd%/config.yml:/opt/config/config.yml" -v "%cd%/notebooks:/opt/notebooks" polynote-spark3 --config /opt/config/config.yml
+docker run --rm -it `
+  -p 8192:8192 `
+  -p 4040-4050:4040-4050 `
+  -v ${PWD}/config.yml:/opt/config/config.yml `
+  -v ${PWD}/notebooks:/opt/notebooks `
+  polynote-docker `
+  --config /opt/config/config.yml
 ```
 🌐 Truy cập Polynote
 
